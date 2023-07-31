@@ -1,0 +1,33 @@
+.Agregar{
+    margin: 24px 24px;
+    height: 64px;
+    width: 64px;
+    font-size: 50px;
+    text-align: center;
+    border: 2px solid palegoldenrod;
+    border-radius: 50px;
+    background-color: yellow;
+   position: fixed;
+   right: 38%;
+   bottom: 0;
+    transform: rotate(0);
+    transition: 2 ease;
+
+}
+
+.Agregar:hover{
+    transform: rotate(224deg);
+}
+
+@media (min-width: 640px) {
+    .Agregar{
+        width: calc(100% - 62px);
+        position: static;
+        
+    }
+
+    .Agregar:hover{
+    transform: rotate(0);
+    box-shadow: 50px 5px 50px rgba(32, 35, 41, 0.25);
+}
+}
