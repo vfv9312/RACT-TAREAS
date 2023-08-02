@@ -4,6 +4,9 @@ import {TodoList} from '../lista/TodoList';
 import { TodoItem } from '../Item/TodoItem';
 import { CreateBoton } from '../Boton/Boton';
 import { useLocalStorage } from "./useLocalStore";
+import {Cargando} from "../Animaciones/cargando"
+import {NuevaTarea} from '../Animaciones/AnimacionCrarNuevaList/NuevaTarea'
+
 import React from 'react';
 
 function Appdatos() {
@@ -23,7 +26,10 @@ function Appdatos() {
 
 
 
-  const [tareas, guardartareas] = useLocalStorage('Tareas_v1', []);
+  const {item : tareas, 
+    guardaritem : guardartareas,
+  cargando,
+error} = useLocalStorage('Tareas_v1', []);
   const [busquedaValue, setbusquedaValue] = React.useState('');
 
   
@@ -57,11 +63,17 @@ function Appdatos() {
 
     return (
         <React.Fragment>{/*<div className="App">*/}
+
+      
         
            <TodoTitulo Contador={tareasCompletador} total={todasLasTareas} sinpendientes = {todaslastareaslistas} ></TodoTitulo>
            <TodoBusqueda busquedaValue={busquedaValue}
            setbusquedaValue={setbusquedaValue}></TodoBusqueda>
            <TodoList >
+           {cargando && <Cargando></Cargando>}
+        {error && <p>Error</p>}
+        {!cargando && Busquedatareas.length == 0 && <NuevaTarea/>}
+
            {Busquedatareas.map(todo => (
            <TodoItem 
            key = {todo.text} text = {todo.text} completed = {todo.completed}
