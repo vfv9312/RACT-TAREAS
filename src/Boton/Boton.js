@@ -1,11 +1,22 @@
 import './Boton.css'
-function CreateBoton(params) {
+import {ContextoTarea} from "../TareaContext/TareaContext.jsx"
+function CreateBoton({setOpenModal, onOpenModal}) {
+
+
+      
+
+      
+    
     return(
+
         <div>
-        <button className="Agregar" onClick={(event)=> {console.log("Le diste click")
-        console.log(event.target)}
+        <button className="Agregar" onClick={(event)=> { 
+         
+                setOpenModal(!onOpenModal);
+    }
     }>+</button>
         </div>
+
     );
     
 }

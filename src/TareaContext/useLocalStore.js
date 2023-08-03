@@ -45,3 +45,14 @@ function useLocalStorage(itemName, initialValue) {
   }
 
   export {useLocalStorage};
+
+      //  const defaultTodos = [
+//   {text: 'Ver Barbie con Yuri', completed: true},
+//   {text:'Ver openhaimer con Yuri', completed:false},
+//   {text:'Comer tacos rosa con Yuri', completed:false},
+//   {text:'Hacer ejercicio con Yuri', completed:false},
+//   {text:'Conseguir ropa rosa', completed: true}]; //liberar array
+//localStorage.setItem("Tareas_v1", defaultTodos)
+//localStorage.removeItem("Tareas_v1")
+//const stringifytareas = JSON.stringify(defaultTodos); convierte en string el arreglo por que localstore solo lee esto
+// const parsetareas = JSON.parse(stringifytareas); convierte el texto denuevo en coidgo js para porder usarlo
