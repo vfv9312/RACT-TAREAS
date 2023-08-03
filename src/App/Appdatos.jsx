@@ -8,6 +8,7 @@ import {Cargando} from "../Animaciones/cargando"
 import {NuevaTarea} from '../Animaciones/AnimacionCrarNuevaList/NuevaTarea'
 import {ContextoTarea} from "../TareaContext/TareaContext"
 import React from 'react';
+import { Formulario } from '../formulario/formulario';
 
 function Appdatos() {
 
@@ -54,8 +55,8 @@ function Appdatos() {
       
        {/* Haci se crean los comentarios en JSX */}
 
-     {OpenModal &&  (<Modal >
-        
+     {OpenModal &&  (<Modal > 
+      <Formulario/>
        </Modal>)}
        </>)}</ContextoTarea.Consumer>
           </React.Fragment>  

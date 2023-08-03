@@ -32,6 +32,16 @@ error} = useLocalStorage('Tareas_v1', []);
       guardartareas(nuevastareas);
     };
 
+    const addTodo = (text) => {
+      const Estado = [...tareas];
+      Estado.push({
+        text,
+        completed: false,
+      });
+      guardartareas(Estado);
+    };
+  
+
     const tareasEliminadas = (text) => {
       const nuevastareas = [...tareas];
       const tareaIndex = nuevastareas.findIndex(
@@ -54,7 +64,8 @@ error} = useLocalStorage('Tareas_v1', []);
     tareasListas,
     tareasEliminadas,
     OpenModal,
-    setOpenModal
+    setOpenModal,
+    addTodo
 }}>
 {children}
   
