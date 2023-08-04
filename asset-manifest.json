@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vfv9312/RACT-TAREAS/static/css/main.6fe69706.css",
+    "main.js": "/vfv9312/RACT-TAREAS/static/js/main.e149e0a5.js",
+    "index.html": "/vfv9312/RACT-TAREAS/index.html",
+    "main.6fe69706.css.map": "/vfv9312/RACT-TAREAS/static/css/main.6fe69706.css.map",
+    "main.e149e0a5.js.map": "/vfv9312/RACT-TAREAS/static/js/main.e149e0a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fe69706.css",
+    "static/js/main.e149e0a5.js"
+  ]
+}
